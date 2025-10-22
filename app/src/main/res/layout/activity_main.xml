@@ -5,46 +5,57 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="20dp">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="164dp"
-        android:text="Text and Character counter"
+        android:text="Word Character Counter"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="306dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="331dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="354dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/etInput"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:hint="Įveskite tekstą čia..."
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <Spinner
+        android:id="@+id/spinnerChoice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="309dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@id/etInput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btnCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skaičiuoti"
+        app:layout_constraintTop_toBottomOf="@id/etInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rezultatas: "
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/btnCount"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
