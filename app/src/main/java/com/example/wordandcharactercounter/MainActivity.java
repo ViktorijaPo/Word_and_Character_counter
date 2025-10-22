@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnCount;
     TextView tvResult;
     String selectedOption = "Words"; // default
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +51,14 @@ public class MainActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        // Button click
+        // Button
         btnCount.setOnClickListener(v -> {
             String text = etInput.getText().toString();
+            if (text.isEmpty()) {
+                Toast.makeText(this, "Text box is empty", Toast.LENGTH_SHORT).show();
+
+                return;
+            }
 
             if (selectedOption.equals("Words")) {
                 long count = WordCounter.countWords(text);
