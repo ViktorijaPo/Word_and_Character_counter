@@ -4,4 +4,12 @@
         <item>Words</item>
         <item>Characters</item>
     </string-array>
+    <string name="title_main">Word Character Counter</string>
+    <string name="hint_input">Input here</string>
+    <string name="btn_count_label">Count</string>
+    <string name="toast_empty">Text box is empty!</string>
+    <string name="word_count_label">Word counter:</string>
+    <string name="character_count_label">Character counter:</string>
+
+
 </resources>

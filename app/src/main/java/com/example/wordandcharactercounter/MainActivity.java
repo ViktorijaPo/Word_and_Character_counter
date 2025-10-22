@@ -54,11 +54,8 @@ public class MainActivity extends AppCompatActivity {
         // Button
         btnCount.setOnClickListener(v -> {
             String text = etInput.getText().toString();
-            if (text.isEmpty()) {
-                Toast.makeText(this, "Text box is empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.toast_empty), Toast.LENGTH_SHORT).show();
 
-                return;
-            }
 
             if (selectedOption.equals("Words")) {
                 long count = WordCounter.countWords(text);
