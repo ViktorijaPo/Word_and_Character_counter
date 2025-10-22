@@ -12,16 +12,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.wordandcharactercounter.CharacterCounter;
-import com.example.wordandcharactercounter.R;
-
 public class MainActivity extends AppCompatActivity {
 
     EditText etInput;
     Spinner spinnerChoice;
     Button btnCount;
     TextView tvResult;
-    String selectedOption = "Žodžiai"; // default
+    String selectedOption = "Words"; // default
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
