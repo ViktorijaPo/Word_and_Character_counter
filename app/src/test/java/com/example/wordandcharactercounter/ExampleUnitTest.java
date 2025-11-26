@@ -79,6 +79,6 @@ public class ExampleUnitTest {
 
     @Test
     public void countCharacters_nullInput_returnsZero() {
-        assertEquals(0, CharacterCounter.countCharacters(null));
+        assertEquals(0, CharacterCounter.countCharacters(null)) ;
     }
 }
